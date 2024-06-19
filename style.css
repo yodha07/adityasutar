@@ -226,6 +226,15 @@
     text-decoration: none;
 }
 
+.item1 :hover{
+    color: red;
+    transition: 0.2s;
+}
+
+.h3 :hover{
+    color: red;
+}
+
 .item2 {
     grid-area: header2;
 }
@@ -256,6 +265,12 @@ ul {
     font-family: "Playfair Display", serif;
     font-size: clamp(1.5rem, 1rem, 5rem);
     text-decoration: none;
+    padding-right: 5%;
+}
+
+li :hover{
+    color: red;
+    transition: .2s ;
 }
 
 li {
