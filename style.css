@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .intro, .work1, .work2, .playlist, .res, .projects {
     font-size: clamp(1.5rem,8vmin,3.5rem);
     letter-spacing: -2px;
