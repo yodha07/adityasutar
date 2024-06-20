@@ -6,7 +6,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    min-width: 678px;
+}
+
+body{
+    min-width: 400px;
 }
 
 html {
@@ -50,8 +53,13 @@ html {
     display: flex;
 }
 
+.work1{
+    color: #FFE4E1;
+}
+
 .work2 {
     background-color: #15d41f;
+    color: #FFE4E1;
 }
 
 .work1 div, .work2 div {
