@@ -258,12 +258,12 @@ footer {
     text-decoration: none;
 }
 
-.item1:hover {
+.aditya_sutar:hover{
     color: red;
-    transition: 0.2s;
+    transition: .2s;
 }
 
-.h3:hover {
+h3:hover {
     color: red;
 }
 
@@ -300,14 +300,14 @@ ul {
     padding-right: 5%;
 }
 
-li:hover {
-    color: red;
-    transition: .2s;
-}
-
 li {
     display: inline;
     margin-right: 10px;
+}
+
+.nav_links:hover{   
+    color: red;
+    transition: .2s;
 }
 
 .plainlink {
