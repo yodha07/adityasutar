@@ -13,7 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.intro, .work1, .work2, .playlist, .res, .projects {
+.intro, .work1, .work2, .projects {
     font-size: clamp(1.5rem,8vmin,3.5rem);
     letter-spacing: -2px;
     color: white;
@@ -46,9 +46,16 @@ html{
     border: 1rem solid transparent;
 }
 
-.work1 {
+.work1 , .work2{
     background-color: rgb(255, 145, 0);
     color: #FFE4E1;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.work2{
+    background-color: #15d41f;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -69,6 +76,14 @@ html{
     transition: 0.2s;
 }
 
+.work2:hover {
+    background-color: #FFE4E1;
+    color: #15d41f;
+    border: 1rem solid;
+    border-color: #15d41f;
+    transition: 0.2s;
+}
+
 .work1 img, .work2 img{
     width: 100%;
     display: block;
@@ -83,70 +98,9 @@ html{
     transition: 0.2s ease;
 }
 
-.work2 {
-    background-color: rgb(85, 172, 243);
-}
-
-.vanessa {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-}
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.playlist, .res {
-    width: 100%;
-    height: 33.33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.playlist {
-    background-color: aqua;
-    color: rgb(253, 72, 72);
-    border: 1rem solid transparent;
-    text-decoration: none;
-}
-
-.playlist:hover{
-    background-color: rgb(253, 72, 72);
-    color: aqua;
-    transition: 0.2s;
-    border: 1rem solid;
-    border-color: aqua;
-}
-
-.res{
-    color: bisque;
-    background-color: #0E0D0C;
-    border: 1rem solid transparent;
-    text-decoration: none;
-
-}
-
-.res:hover{
-    background-color: bisque;
-    color: #0E0D0C;
-    transition: 0.2s;
-    border: 1rem solid;
-    border-color: #0E0D0C;
-}
-
-.projects {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: antiquewhite;
+.work2 img:hover{
+    transform: translateY(-15px);
+    transition: 0.2s ease;
 }
 
 .intro {
@@ -161,20 +115,6 @@ html{
         font-size: 1.45rem;
         width: 100%;
         height: auto;
-    }
-
-    .vanessa {
-        flex-direction: column;
-    }
-
-    .left-column, .projects {
-        width: 100%;
-        height: auto;
-    }
-
-    .playlist, .res {
-        height: auto;
-        width: auto;
     }
 
     .work1 img{
@@ -194,9 +134,6 @@ html{
         padding-left: 15px;
     }
 
-    .res, .playlist{
-        font-size: 1.7rem;
-    }
 }
 
 .playlist_wrapper{
@@ -210,6 +147,77 @@ html{
     grid-template-columns: 1.5fr 1.5fr 1fr;
     grid-template-rows: 100px;
     grid-template-areas: 'header header2';
+}
+
+.resume{
+    grid-area: resume;
+}
+
+footer{
+    grid-area: footer;
+    align-content: center;
+}
+
+.playlist, .resume, .projects {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    font-size: clamp(2rem, 3rem, 4rem);
+}
+
+.playlist {
+    background-color: aqua;
+    color: rgb(253, 72, 72);
+    border: 1rem solid transparent;
+    text-decoration: none;
+}
+
+.playlist:hover{
+    background-color: rgb(253, 72, 72);
+    color: aqua;
+    transition: 0.2s;
+    border: 1rem solid;
+    border-color: aqua;
+}
+
+.resume{
+    color:  #0E0D0C;
+    background-color: bisque;
+    border: 1rem solid transparent;
+    text-decoration: none;
+}
+
+.resume:hover{
+    background-color: #0E0D0C;
+    color: bisque;
+    transition: 0.2s;
+    border: 1rem solid;
+    border-color: bisque;
+}
+
+.projects{
+    background-color: rgb(144, 61, 253);
+    grid-area: empty;
+    color: lightsalmon;
+    text-decoration: none;
+    border: 1rem solid transparent;
+}
+
+.projects:hover{
+    background-color: lightsalmon;
+    color: rgb(144, 61, 253);
+    border: 1rem solid rgb(144, 61, 253);
+    transition: 0.2s;
+}
+
+.vanessa{
+    display: grid;    
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 25dvh 25dvh 25dvh;
+    grid-template-areas: 
+    'playlist empty' 
+    'resume empty'
+    'footer empty';
 }
 
 .item1, .item2, .item3, .item4 {
@@ -351,3 +359,7 @@ hr.solid{
     border-top: 3px solid red;
 }
 */
+
+footer{
+    text-align: center;
+}
